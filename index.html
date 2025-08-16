@@ -9,7 +9,7 @@
   </head>
   <body>
     <section class="w-11/12 mx-auto py-10 md:w-3/5 md:py-24">
-      <form name="SelfAssessment">
+      <form name="pkm-tpi">
         <div class="space-y-12">
           <div class="border-b border-black/10 pb-12">
             <h2 class="text-2xl/7 font-semibold text-black">
@@ -20,7 +20,7 @@
             </p>
 
             <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-              <div class="sm:col-span-3">
+              <div class="sm:col-span-2">
                 <label for="name" class="block text-sm/6 font-medium text-black"
                   >Nama Lengkap</label
                 >
@@ -65,8 +65,48 @@
                   </div>
                 </div>
               </div>
-
               <div class="sm:col-span-2">
+                <label
+                  for="jenis_kelamin"
+                  class="block text-sm/6 font-medium text-black"
+                  >Jenis Kelamin</label
+                >
+                <div class="mt-2 grid grid-cols-1">
+                  <select
+                    id="jenis_kelamin"
+                    name="jenis_kelamin"
+                    required
+                    class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-blatext-black/5 py-1.5 pr-8 pl-3 text-base text-black outline-1 -outline-offset-1 outline-black/10 bg-black/5 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"
+                  >
+                    <option
+                      value=""
+                      disabled
+                      selected
+                      hidden
+                      class="text-gray-400"
+                    >
+                      -- Pilih Jenis Kelamin --
+                    </option>
+                    <option value="laki-laki">Laki-laki</option>
+                    <option value="perempuan">Perempuan</option>
+                  </select>
+                  <svg
+                    viewBox="0 0 16 16"
+                    fill="currentColor"
+                    data-slot="icon"
+                    aria-hidden="true"
+                    class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-400 sm:size-4"
+                  >
+                    <path
+                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
+                      clip-rule="evenodd"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="sm:col-span-3">
                 <label for="nik" class="block text-sm/6 font-medium text-black"
                   >Nomor Induk Kependudukan</label
                 >
@@ -84,6 +124,22 @@
                       >Warn: <span id="nikErrContent" class="font-normal"></span
                     ></span>
                   </div>
+                </div>
+              </div>
+
+              <div class="sm:col-span-3">
+                <label for="nik" class="block text-sm/6 font-medium text-black"
+                  >Alamat</label
+                >
+                <div class="mt-2">
+                  <input
+                    id="alamat"
+                    type="text"
+                    name="alamat"
+                    autocomplete="alamat"
+                    required
+                    class="block w-full rounded-md bg-black/5 px-3 py-1.5 text-base text-black outline-1 -outline-offset-1 outline-black/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"
+                  />
                 </div>
               </div>
             </div>
