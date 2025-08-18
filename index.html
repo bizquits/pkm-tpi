@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PKM TPI</title>
-    <script src="/src/js/script.js"></script>
-    <link href="/dist/output.css" rel="stylesheet" />
+    <script src="src/js/script.js"></script>
+    <link href="dist/output.css" rel="stylesheet" />
   </head>
   <body>
     <!-- Loading Screen -->
@@ -32,7 +32,12 @@
         <p class="text-gray-400 text-base mt-1">
           Barcode Skrining Mandiri Tuberkulosis Anda
         </p>
-        <button id="btnOke" class="btn mt-5">Lanjutkan</button>
+        <button
+          id="btnOke"
+          class="mt-5 rounded-md px-3 py-2 text-sm font-semibold text-black outline-1 outline-emerald-600 hover:bg-emerald-600 hover:text-white transition ease-in-out duration-300"
+        >
+          Lanjutkan
+        </button>
       </div>
     </div>
 
@@ -508,6 +513,9 @@
                   </div>
                 </div>
               </fieldset>
+              <fieldset>
+                <input name="tbc" id="tbc" type="text" class="hidden" />
+              </fieldset>
             </div>
           </div>
 
@@ -665,6 +673,6 @@
     </div>
     <audio id="music" src="src/backsound.mp3"></audio>
   </body>
-  <script src="/src/js/form.js"></script>
+  <script src="src/js/form.js"></script>
   <script src="src/js/audio.js"></script>
 </html>

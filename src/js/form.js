@@ -9,6 +9,8 @@ const modalErrContent = document.getElementById("modalErrContent");
 const modalSvg = document.getElementById("modalSvg");
 const modalButton = document.getElementById("modalButton");
 
+const valueTBC = document.getElementById("tbc");
+
 form.addEventListener("submit", (e) => {
   let score = 0;
   let message = "";
@@ -56,7 +58,7 @@ form.addEventListener("submit", (e) => {
 
   if (score >= 3) {
     message = `
-    <div class="text-center">
+    <div class="text-center md:text-left">
       <p class="font-bold">Anda memiliki gejala TBC</p> 
       <p>Ayo kunjungi layanan kesehatan terdekat untuk mendapatkan 
       <span class="font-bold">PENGOBATAN TBC GRATIS</span>. TBC bisa diobati sampai sembuh.</p>
@@ -68,6 +70,7 @@ form.addEventListener("submit", (e) => {
     button = `<a command="close" commandfor="dialog" href="https://wa.me/628127079122?text=Saya%20memiliki%20gejala%20TBC%20dan%20saya%20ingin%20mendapatkan%20pengobatan.
             " target="_blank" class="inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-red-500 sm:ml-3 sm:w-auto">Lindungi Keluarga Anda</a>
               `;
+    valueTBC.value = "positif";
   } else {
     message = `
       <p><strong>Tetap jaga kesehatan dengan mencegah penularan TBC:</strong></p>
@@ -88,6 +91,7 @@ form.addEventListener("submit", (e) => {
                         </svg>`;
     button = `<a command="close" commandfor="dialog" href="https://dinkes.kepriprov.go.id/blog/viewberita/waspada-tuberkulosis-kenali-gejalanya-cegah-penularannya-dan-tuntaskan-pengobatannya" target="_blank" class="inline-flex w-full justify-center rounded-md bg-green-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-green-500 sm:ml-3 sm:w-auto">Informasi Lebih Lanjut</a>
               `;
+    valueTBC.value = "negatif";
   }
 
   e.preventDefault();
