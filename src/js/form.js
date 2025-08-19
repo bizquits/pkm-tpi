@@ -46,7 +46,6 @@ form.addEventListener("submit", (e) => {
     'input[name="kontak_lain"]:checked'
   )?.value;
 
-  if (batuk_2minggu === "iya") score++;
   if (demam_tak_jelas === "iya") score++;
   if (keringat_malam === "iya") score++;
   if (berat_turun === "iya") score++;
@@ -56,7 +55,7 @@ form.addEventListener("submit", (e) => {
   if (kontak_keluarga === "iya") score++;
   if (kontak_lain === "iya") score++;
 
-  if (score >= 3) {
+  if (batuk_2minggu === "iya" || score >= 3) {
     message = `
     <div class="text-center md:text-left">
       <p class="font-bold">Anda memiliki gejala TBC</p> 
